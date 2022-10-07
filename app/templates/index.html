@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>catalog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3" style="height: 74px;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img src="data:image/png;base64,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" width="60" height="60" style="width: 55px;height: 55px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <h4 class="text-start" style="color: var(--bs-navbar-brand-color);">Custom Catalogue Builder</h4>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="https://docs.d2iq.com" target="_blank">D2IQ Docs</a></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-bottom: 43px;padding-top: 35px;">
+        <div class="row text-start">
+            <div class="col-xxl-6" style="width: 467px;">
+                <div class="card" style="width: 448px;height: 270px;">
+                    <div class="card-header">
+                        <h5 class="mb-0">Connect to Github</h5>
+                    </div>
+                    <div class="card-body text-start">
+                        <form>
+                            <div class="row" style="margin-top: -4px;">
+                                <div class="col-1 col-xxl-5 align-self-center" style="width: 162px;"><label class="col-form-label">Github Username:</label></div>
+                                <div class="col-7"><input class="form-control" type="text" style="margin-top: 13px;margin-bottom: 13px;width: 250px;"></div>
+                            </div>
+                            <div class="row" style="margin-top: -4px;">
+                                <div class="col-1 col-xxl-5 align-self-center" style="width: 162px;"><label class="col-form-label">Token:</label></div>
+                                <div class="col-7"><input class="form-control" type="password" style="width: 250px;"></div>
+                            </div>
+                            <div class="row" style="margin-top: -4px;">
+                                <div class="col-1 col-xxl-5 align-self-center" style="width: 162px;"><label class="col-form-label">Repo Name:</label></div>
+                                <div class="col-7"><input class="form-control" type="text" style="margin-top: 13px;margin-bottom: 13px;width: 250px;"></div>
+                                <div class="col" style="margin-top: 4px;"><button class="btn btn-danger btn-sm float-end" type="button" style="width: 94px;margin-left: 5px;">Disconnect</button><button class="btn btn-success btn-sm float-end" type="button" style="width: 94px;margin-left: 5px;">Connect</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 448px;height: 270px;">
+                    <div class="card-header">
+                        <h5 class="mb-0">Catalogue Settings</h5>
+                    </div>
+                    <div class="card-body text-start">
+                        <form>
+                            <div class="row" style="margin-top: -4px;">
+                                <div class="col-1 col-xxl-5 align-self-center" style="width: 162px;"><label class="col-form-label">Category (ie, data):</label></div>
+                                <div class="col-7"><input class="form-control" type="text" style="margin-top: 13px;margin-bottom: 13px;width: 250px;"></div>
+                            </div>
+                            <div class="row" style="margin-top: -4px;">
+                                <div class="col-1 col-xxl-5 align-self-center" style="width: 162px;"><label class="col-form-label">Cluster Scope:</label></div>
+                                <div class="col-7"><select class="form-select" style="width: 250px;">
+                                        <option value="13">Workspace</option>
+                                        <option value="14">Project</option>
+                                    </select></div>
+                            </div>
+                            <div class="row" style="margin-top: -4px;">
+                                <div class="col-1 col-xxl-5 align-self-start" style="width: 162px;"><label class="col-form-label" style="margin-top: 13px;">Annotations:</label></div>
+                                <div class="col-7"><textarea class="form-control" style="height: 88px;margin-top: 17px;width: 250px;"></textarea></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="table-responsive border-5">
+            <table class="table table-striped table-sm table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Package Name</th>
+                        <th>Version</th>
+                        <th>Repository</th>
+                        <th>Description</th>
+                        <th style="text-align: center;">Official Chart</th>
+                        <th style="text-align: center;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Traefik</td>
+                        <td>2.1.0</td>
+                        <td>Traefik Labs</td>
+                        <td>Traefik&nbsp; is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.</td>
+                        <td style="text-align: center;"><input type="checkbox" disabled="" checked=""></td>
+                        <td style="text-align: center;"><button class="btn btn-primary btn-sm" type="button">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Traefik</td>
+                        <td>2.1.1</td>
+                        <td>Traefik Labs</td>
+                        <td>Traefik&nbsp; is a modern HTTP reverse proxy and load balancer made to deploy microservices with ease.</td>
+                        <td style="text-align: center;"><input type="checkbox" disabled="" checked=""></td>
+                        <td style="text-align: center;"><button class="btn btn-primary btn-sm" type="button">Add</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
