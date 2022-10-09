@@ -1,6 +1,14 @@
+"""
+Script:     Catalogger App
+Developer:  Dave Whitehouse - D2IQ Solutions Architect
+Contact:    @dwhitehouse
+Date:       7 Oct 22
+Summary:    A class that defines a connection to Github based on repo username and a token
+"""
+
 from github import Github
 
-class CatalogRepo:
+class GithubRepo:
     def __init__(self, username, token, repo_name):
         self.token = token
         self.username = username

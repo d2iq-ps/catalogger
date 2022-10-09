@@ -1,0 +1,10 @@
+displayName: {{ display_name }}
+description: {{ description }}
+category:
+  - {{ category }}
+type: catalog
+scope:
+  - {{ scope }}
+overview: |-
+  {{ overview }}
+icon: {{ icon }}

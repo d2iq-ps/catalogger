@@ -55,3 +55,13 @@
   border-radius: 50%;
 }
 
+footer {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#navcol-5 {
+}
+

@@ -1,0 +1,12 @@
+{# templates/helmrepo_template.txt #}
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: {{ repo_name }}
+  namespace: ${workspaceNamespace}
+  labels:
+    kommander.d2iq.io/dkp-airgapped: unsupported
+spec:
+  url: ${helmMirrorURL:={{ url }}}
+  interval: 5m
