@@ -1,7 +1,7 @@
 altair==4.2.0
 ansible==2.9.6
 anyio==3.6.1
-apache-libcloud==2.8.0
+apache-libcloud
 appdirs==1.4.3
 argcomplete==1.8.1
 argon2-cffi==21.3.0
@@ -38,7 +38,7 @@ dill==0.3.2
 distlib==0.3.0
 dnslib==0.9.19
 dnspython==1.16.0
-docker==5.0.0
+docker
 docutils==0.15.2
 dulwich==0.20.32
 ecdsa==0.18.0
@@ -49,7 +49,7 @@ filelock==3.0.12
 Flask==2.1.3
 flask-oidc==1.4.0
 Flask-SQLAlchemy==2.5.1
-flaskoidc==1.1.2
+flaskoidc
 gitdb==4.0.9
 GitPython==3.1.27
 greenlet==1.1.2
@@ -83,7 +83,7 @@ keyring==18.0.1
 launchpadlib==1.10.13
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
-localstack==0.14.0
+localstack
 localstack-client==1.31
 localstack-ext==0.14.0.5
 localstack-plugin-loader==1.1.1
@@ -149,7 +149,7 @@ PyYAML==5.4.1
 pyzmq==22.3.0
 qtconsole==5.2.2
 QtPy==2.0.0
-requests==2.28.1
+requests
 requests-kerberos==0.12.0
 requests-ntlm==1.1.0
 requests-toolbelt==0.9.1
