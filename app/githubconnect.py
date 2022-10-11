@@ -7,6 +7,7 @@ Summary:    A class that defines a connection to Github based on repo username a
 """
 
 from github import Github
+from flask import session, request, redirect, url_for
 
 class GithubRepo:
     def __init__(self, username, token, repo_name):
@@ -44,3 +45,23 @@ class GithubRepo:
             return True
         except Exception as e:
             return False
+
+
+def connect_github():
+    github_vars={"gh_username": "", "gh_token": "", "gh_repo": ""}
+    for key, value in request.form.items():
+        github_vars[key]=value
+    c = GithubRepo(github_vars['gh_username'], github_vars['gh_token'], github_vars['gh_repo'])
+    if c.check_creds():
+        print("Connected to Github")
+        session['gh_form_state'] = "disabled"
+        session['gh_connected'] = "text-success"
+        session['gh_status_message']  = f"Connected to {github_vars['gh_username']}"
+        session['gh_status_colour'] = "text-success"
+        return redirect(url_for('main'))
+    else:
+        session['gh_form_state'] = ""
+        session['gh_connected'] = "text-grey"
+        session['gh_status_message']  = f"Not Connected to a repo"
+        session['gh_status_colour'] = "text-danger"
+        print("Failed to connect to Github")
