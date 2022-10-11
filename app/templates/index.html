@@ -60,15 +60,15 @@
                         <form id="github_form" method="post" name="github" action="/github">
                             <div class="row align-items-center">
                                 <div class="col" style="width: 162px;"><label class="col-form-label" style="font-size: 15px;">Github Username:</label></div>
-                                <div class="col"><input id="gh_username" class="form-control form-control-sm" type="text" style="margin-top: 13px;margin-bottom: 13px;width: 135px; font-size: 15px" name="gh_username" value="swiftsuretech" {{ state }} /></div>
+                                <div class="col"><input id="gh_username" class="form-control form-control-sm" type="text" style="margin-top: 13px;margin-bottom: 13px;width: 135px; font-size: 15px" name="gh_username" {{ state }} /></div>
                             </div>
                             <div class="row align-items-center">
                                 <div class="col" style="width: 162px;font-size: 14px;"><label class="col-form-label" style="font-size: 15px;">Token:</label></div>
-                                <div class="col"><input id="gh_token" class="form-control form-control-sm" type="password" style="width: 135px; font-size: 15px;" name="gh_token" value="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" {{ state }} /></div>
+                                <div class="col"><input id="gh_token" class="form-control form-control-sm" type="password" style="width: 135px; font-size: 15px;" name="gh_token" {{ state }} /></div>
                             </div>
                             <div class="row align-items-center">
                                 <div class="col" style="width: 162px;"><label class="col-form-label" style="font-size: 15px;">Repo Name:</label></div>
-                                <div class="col"><input id="gh_repo" class="form-control form-control-sm" type="text" style="margin-top: 13px; font-size: 15px; margin-bottom: 13px;width: 135px;" name="gh_repo" value="test_repository" {{ state }} /></div>
+                                <div class="col"><input id="gh_repo" class="form-control form-control-sm" type="text" style="margin-top: 13px; font-size: 15px; margin-bottom: 13px;width: 135px;" name="gh_repo" {{ state }} /></div>
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-8"><p class="{{gh_status_colour}}" style="font-style: margin-top: 13px;font-size: 14px; margin-top: 12px;">{{gh_status_message}}</p></div>
