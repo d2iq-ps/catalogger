@@ -5,14 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>catalog</title>
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/img/block.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/img/block.svg">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img src="assets/img/block.svg" width="35px" height="35px" style="width: 50px;height: 50px;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3" style="height: 69.125px;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img src="assets/img/block.svg"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-5">
                 <h4 class="text-start" style="color: var(--bs-navbar-brand-color);">Custom Catalogue Builder</h4>
                 <ul class="navbar-nav ms-auto">
@@ -29,8 +31,8 @@
         <div class="row">
             <div class="col" style="margin-top: 42px;">
                 <h1>The Catalogue has successfully built</h1>
-                <p>You may download the bundle as a tar file or, if you successfully authenticated with Github, push to the repo</p>
-                <form action="/download"><button class="btn btn-success btn-sm" type="submit" style="margin-right: 7px;width: 135px;">Download Bundle</button><button class="btn btn-success btn-sm" type="button" style="width: 135px;">Push to Github</button></form>
+                <p>You may download the bundle as a tar file from this page.</p><p>{{ git_msg }}</p>
+                <form action="/download"><button class="btn btn-success btn-sm" type="submit" style="margin-right: 7px;width: 135px;">Download Bundle</button></form>
             </div>
         </div>
     </div>

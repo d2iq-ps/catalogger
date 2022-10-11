@@ -16,6 +16,3 @@ def build_gallery(folder):
         name = image.split('.')[0]
         gallery = gallery + f"<img style=\"width: 27px;height: 27px;margin-left: 10px\" src=\"assets/icons/{image}\" alt=\"{name}\"/>"
     return gallery
-
-
-# print(build_gallery(UPLOAD_FOLDER))

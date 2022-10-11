@@ -7,7 +7,7 @@ Summary:    A simple web application to automate building custom catalogues for 
 """
 
 from flask import Flask, request, redirect, url_for, render_template, session, Response, send_from_directory
-from githubconnect import connect_github
+from githubconnect import connect_github, repo_init
 from helmsearch import get_helmcharts
 from jinja2 import Environment, FileSystemLoader
 from sessionmanager import reset_session
@@ -21,6 +21,7 @@ layout_dir = "app/custom_catalogue"
 tarball_dir = 'app/templates/assets/tarballs'
 UPLOAD_FOLDER = 'app/templates/assets/icons'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+tar_name = "custom_catalogue.tar"
 
 # Define jinja environment
 environment = Environment(loader=FileSystemLoader("app/templates"))
@@ -97,8 +98,13 @@ def upload_image():
 
 @app.route('/build_bundle', methods=['GET'])
 def build_bundle():
-    build_out(UPLOAD_FOLDER)
-    return render_template('success.html')
+    build_out(uploads=UPLOAD_FOLDER, environment=environment, tarname=tar_name, layout_dir=layout_dir)
+    try:
+        gh_status = repo_init(session['gh_repo_name'])
+    except:
+        gh_status = 'No Github connection request was made'
+    git_msg = gh_status
+    return render_template('success.html', git_msg=git_msg)
 
 @app.route('/download')
 def download_tar():
