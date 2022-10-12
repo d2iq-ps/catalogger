@@ -8,11 +8,12 @@
     <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/img/block.svg">
     <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/img/block.svg">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Roboto.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
 </head>
 
-<body>
+<body style="font-family: Roboto, sans-serif;">
     <div class="modal fade" role="dialog" tabindex="-1" id="image_upload_modal" name="image_upload_modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -59,7 +60,7 @@
                     <div class="card-body">
                         <form id="github_form" method="post" name="github" action="/github">
                             <div class="row align-items-center">
-                                <div class="col" style="width: 162px;"><label class="col-form-label" style="font-size: 15px;">Github Username:</label></div>
+                                <div class="col" style="width: 162px;"><label class="col-form-label" style="font-size: 15px;font-family: Roboto, sans-serif;">Github Username:</label></div>
                                 <div class="col"><input id="gh_username" class="form-control form-control-sm" type="text" style="margin-top: 13px;margin-bottom: 13px;width: 135px; font-size: 15px" name="gh_username" {{ state }} /></div>
                             </div>
                             <div class="row align-items-center">
