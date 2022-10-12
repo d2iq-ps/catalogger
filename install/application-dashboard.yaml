@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: catalogger-dash
+  namespace: se-dwhitehouse
+  labels:
+    kommander.d2iq.io/application: catalogger
+data:
+  dashboardLink: /dkp/traefik/dashboard/
+  docsLink: https://doc.traefik.io/traefik/v2.5
+  name: Catalogger
