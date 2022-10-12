@@ -9,5 +9,5 @@ kubectl create -f https://github.com/swiftsuretech/catalogger/tree/master/instal
 Once deployed, recover the endpoint with the following:
 
 ```bash
-kubectl get svc -l app=catalogger -o jsonpath='{.items[0].status.loadBalancer.ingress[0].hostname} && echo 
+kubectl get svc -l app=catalogger -o jsonpath='{.items[0].status.loadBalancer.ingress[0].hostname}' && echo 
 ```
