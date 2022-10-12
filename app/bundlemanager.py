@@ -42,7 +42,7 @@ def build_out(uploads, environment, tarname, layout_dir):
         with open(f"{uploads}/{image_match['image']}", "rb") as vector_image:
             encoded_image = str(base64.b64encode(vector_image.read()))[2:-1]
         # Replace the default icon with the one uploaded
-            with open(f"app/custom_catalogue/services/{image_match['chart']}/metadata.yaml", "r+") as metadata_file:
+            with open(f"/app/custom_catalogue/services/{image_match['chart']}/metadata.yaml", "r+") as metadata_file:
                 search_string = r"icon\: (.*)"
                 content = metadata_file.read()
                 replacement_string = f"icon: {encoded_image}"
@@ -51,8 +51,8 @@ def build_out(uploads, environment, tarname, layout_dir):
                 metadata_file.write(content_new)
                 metadata_file.truncate()
     # Finally, build a tarball in case the user choses to download
-    with tarfile.open(f"app/templates/assets/tarballs/{tarname}", "w:gz") as tar:
-        source_dir = 'app/custom_catalogue'
+    with tarfile.open(f"/app/templates/assets/tarballs/{tarname}", "w:gz") as tar:
+        source_dir = '/app/custom_catalogue'
         tar.add(source_dir, arcname=os.path.basename(source_dir))
     return image_matches
 

@@ -10,7 +10,7 @@ from flask import session
 import shutil
 import os
 
-layout_dir = "app/custom_catalogue"
+layout_dir = "/app/custom_catalogue"
 
 def reset_session(layout_dir):
     # Resets the session
@@ -34,12 +34,12 @@ def reset_session(layout_dir):
     for new_directory in new_directories:
         os.makedirs(f"{layout_dir}/{new_directory}")
     # Clear out icon folder
-    icon_dir = 'app/templates/assets/icons'
-    for f in os.listdir('app/templates/assets/icons'):
+    icon_dir = '/app/templates/assets/icons'
+    for f in os.listdir('/app/templates/assets/icons'):
              os.remove(os.path.join(icon_dir, f))
     # Clear out tarball folder
-    icon_dir = 'app/templates/assets/tarballs'
-    for f in os.listdir('app/templates/assets/tarballs'):
+    icon_dir = '/app/templates/assets/tarballs'
+    for f in os.listdir('/app/templates/assets/tarballs'):
              os.remove(os.path.join(icon_dir, f))
     return layout_dir
 

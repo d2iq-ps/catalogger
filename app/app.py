@@ -17,14 +17,14 @@ import os
 
 app = Flask(__name__, static_folder="templates/assets")
 app.secret_key  = 'Dy4OvQsxcW7WH3U1aXyL52KFEgy9sxiP'
-layout_dir = "app/custom_catalogue"
-tarball_dir = 'app/templates/assets/tarballs'
-UPLOAD_FOLDER = 'app/templates/assets/icons'
+layout_dir = "/app/custom_catalogue"
+tarball_dir = '/app/templates/assets/tarballs'
+UPLOAD_FOLDER = '/app/templates/assets/icons'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 tar_name = "custom_catalogue.tar"
 
 # Define jinja environment
-environment = Environment(loader=FileSystemLoader("app/templates"))
+environment = Environment(loader=FileSystemLoader("/app/templates"))
 
 
 @app.before_first_request
@@ -108,7 +108,7 @@ def build_bundle():
 
 @app.route('/download')
 def download_tar():
-    return send_from_directory('/home/dswhitehouse/catalogger/app/templates/assets/tarballs', 'custom_catalogue.tar')
+    return send_from_directory('/home/dswhitehouse/catalogger//app/templates/assets/tarballs', 'custom_catalogue.tar')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
