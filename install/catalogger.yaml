@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
       - image: dswhitehouse/catalogger
+        imagePullPolicy: Always
         name: catalogger
         ports:
         - containerPort: 5000
