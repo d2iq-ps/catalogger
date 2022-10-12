@@ -24,7 +24,7 @@ def reset_session(layout_dir):
     session['search_results'] = '<p style="padding: 10px;">Enter a search term.</p>'
     session['bundle_short'] = ''
     session['bundle_long'] = []
-    session['scope'] = 'Workspace'
+    session['scope'] = 'WORKSPACE'
     session['build_enabled'] = "disabled"
     # Clear out the temporary layout directory
     shutil.rmtree(layout_dir, ignore_errors=True)

@@ -19,7 +19,7 @@ default_image = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCE
 def build_out(uploads, environment, tarname, layout_dir):
     # Build our deploy template
     template = environment.get_template("deploy_template.md")
-    helm_repo = template.render(repo_name=session['gh_repo_name'] , git_url=session['gh_url_tmp'])
+    helm_repo = template.render(repo_name=session['gh_repo_name'] , git_url=session['gh_url_tmp'], scope=session['scope'])
     with open(f"{layout_dir}/README.md", "w") as hr_file:
         hr_file.write(helm_repo)
     # Get our image names

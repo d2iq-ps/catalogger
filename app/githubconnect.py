@@ -51,7 +51,7 @@ class GithubRepo:
             try:
                 with open(push, "rb") as p:
                     content = p.read().decode("utf-8")
-                    path = '/'.join(push._str.split('/')[2:10])
+                    path = '/'.join(push._str.split('/')[3:10])
                     self.repo.create_file(path, commit_msg, content, 'master')
                 counter = counter + 1
             except Exception as e:
@@ -96,7 +96,7 @@ def connect_github():
         session['gh_status_colour'] = "text-success"
         session['gh_creds'] = github_vars
         session['gh_repo_tmp'] = github_vars['gh_repo']
-        session['gh_url_tmp'] = f"https://github.com/{github_vars['gh_username']}/{github_vars['gh_repo']}/"
+        session['gh_url_tmp'] = f"https://github.com/{github_vars['gh_username']}/{github_vars['gh_repo']}"
         return c
     else:
         session['gh_form_state'] = ""
