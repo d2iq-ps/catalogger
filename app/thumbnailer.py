@@ -13,6 +13,7 @@ import base64
 def build_gallery(folder):
     gallery = ""
     for image in listdir(folder):
-        name = image.split('.')[0]
-        gallery = gallery + f"<img style=\"width: 27px;height: 27px;margin-left: 10px\" src=\"assets/icons/{image}\" alt=\"{name}\"/>"
+        if not image == '.gitkeep':
+            name = image.split('.')[0]
+            gallery = gallery + f"<img style=\"width: 27px;height: 27px;margin-left: 10px\" src=\"assets/icons/{image}\" alt=\"{name}\"/>"
     return gallery
