@@ -108,7 +108,7 @@ def build_bundle():
 
 @app.route('/download')
 def download_tar():
-    return send_from_directory('/home/dswhitehouse/catalogger//app/templates/assets/tarballs', 'custom_catalogue.tar')
+    return send_from_directory('/app/templates/assets/tarballs', 'custom_catalogue.tar')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
