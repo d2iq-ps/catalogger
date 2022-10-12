@@ -1,9 +1,9 @@
 # Custom Catalogue Applications
 
-Your custom catalogue has been built and is ready to deploy to DKP. Set your context to the namespace relating to either the project or workspace you intend to deploy to. Alternatively, set it as an environmental variable:
+Your custom catalogue has been built and is ready to deploy to DKP. Set the relevant namespace for either workspace or project, depending on the scope you chose, as an environmental variable:
 
 ```bash
-export PROJECT=[your_namespace]
+export NAMESPACE=[your_namespace]
 ````
 
 Copy and past the following into the terminal to deploy the catoalogue:
@@ -14,7 +14,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: {{ repo_name | default('[Your Repo Name]')}}
-  namespace: ${PROJECT}
+  namespace: ${NAMESPACE}
   labels:
     kommander.d2iq.io/gitapps-gitrepository-type: catalog
     kommander.d2iq.io/gitrepository-type: catalog
